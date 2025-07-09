@@ -1,0 +1,129 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+import { ABOUT, SITE, SOCIALS } from "@consts";
+---
+
+<Layout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+  <Container>
+    <div class="space-y-10">
+      <div class="animate">
+        <h1 class="text-3xl font-semibold text-black dark:text-white">
+          About Me
+        </h1>
+      </div>
+
+      <div class="space-y-8">
+        <section class="animate space-y-4">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            Who I Am
+          </h2>
+          <div class="space-y-4 text-sm leading-6">
+            <p>
+              Hi, I'm <strong>Hafiz Farhad</strong>, a passionate cybersecurity professional from Pakistan. 
+              I specialize in security research, programming, and competitive hacking through CTF competitions.
+            </p>
+            <p>
+              My journey in cybersecurity began with a curiosity about how systems work and how they can be secured. 
+              Over the years, I've developed expertise in various domains of information security, from web application 
+              security to reverse engineering and cryptography.
+            </p>
+          </div>
+        </section>
+
+        <section class="animate space-y-4">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            What I Do
+          </h2>
+          <div class="space-y-4 text-sm leading-6">
+            <p>
+              As a <strong>Security Researcher</strong>, I focus on discovering vulnerabilities, 
+              developing security tools, and contributing to the cybersecurity community through 
+              research and knowledge sharing.
+            </p>
+            <p>
+              As a <strong>Programmer</strong>, I build tools and applications that solve real-world 
+              security challenges. I enjoy working with various programming languages and frameworks 
+              to create efficient and secure solutions.
+            </p>
+            <p>
+              As a <strong>CTF Player</strong>, I regularly participate in Capture The Flag competitions, 
+              which keep my skills sharp and allow me to learn from the global cybersecurity community.
+            </p>
+          </div>
+        </section>
+
+        <section class="animate space-y-4">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            Skills & Interests
+          </h2>
+          <div class="space-y-4 text-sm leading-6">
+            <div>
+              <h3 class="font-medium text-black dark:text-white mb-2">Security Domains</h3>
+              <ul class="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400">
+                <li>Web Application Security</li>
+                <li>Network Security</li>
+                <li>Reverse Engineering</li>
+                <li>Cryptography</li>
+                <li>Penetration Testing</li>
+                <li>Digital Forensics</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-black dark:text-white mb-2">Programming</h3>
+              <ul class="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400">
+                <li>Python, JavaScript, C/C++</li>
+                <li>Web Development (Frontend & Backend)</li>
+                <li>Security Tool Development</li>
+                <li>Automation & Scripting</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="animate space-y-4">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            Get In Touch
+          </h2>
+          <div class="space-y-4 text-sm leading-6">
+            <p>
+              I'm always interested in connecting with fellow security researchers, developers, 
+              and anyone passionate about cybersecurity. Feel free to reach out!
+            </p>
+            <div class="flex flex-wrap gap-4">
+              {SOCIALS.map((social) => (
+                <Link 
+                  href={social.HREF} 
+                  external
+                >
+                  {social.NAME}
+                </Link>
+              ))}
+              <Link 
+                href={`mailto:${SITE.EMAIL}`}
+              >
+                Email
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section class="animate space-y-4">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            This Website
+          </h2>
+          <div class="text-sm leading-6">
+            <p>
+              This site is built with <Link href="https://astro.build" external>Astro</Link> and 
+              styled with <Link href="https://tailwindcss.com" external>TailwindCSS</Link>. 
+              It's based on the <Link href="https://github.com/trevortylerlee/astro-micro" external>Astro Micro</Link> theme, 
+              customized to fit my needs. The source code is available on my 
+              <Link href="https://github.com/hafizfarhad" external>GitHub</Link>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </Container>
+</Layout>
