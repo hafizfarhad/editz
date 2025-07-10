@@ -2,7 +2,7 @@
 title: "Mandiant (part of Google Cloud)"
 description: "Opensouce contributions to Mandiant (part of Google Cloud)."
 date: "2024-03-26"
-demoURL: "https://astro-nano-demo.vercel.app"
+demoURL: "https://github.com/mandiant/capa"
 repoURL: "https://github.com/mandiant/capa"
 ---
 I contributed to Mandiant’s open source malware analysis framework i.e., capa, capa-rules, capa-testfiles:

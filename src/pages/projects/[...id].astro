@@ -44,19 +44,29 @@ const { Content } = await render(project);
       </h1>
       {
         (project.data.demoURL || project.data.repoURL) && (
-          <nav class="flex gap-1">
+          <div class="animate font-mono text-sm text-neutral-600 dark:text-neutral-400">
+            <span>Links: </span>
             {project.data.demoURL && (
-              <Link href={project.data.demoURL} external>
-                demo
-              </Link>
+              <a
+                href={project.data.demoURL}
+                class="font-medium hover:text-black dark:hover:text-white transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                #demo{" "}
+              </a>
             )}
-            {project.data.demoURL && project.data.repoURL && <span>/</span>}
             {project.data.repoURL && (
-              <Link href={project.data.repoURL} external>
-                repo
-              </Link>
+              <a
+                href={project.data.repoURL}
+                class="font-medium hover:text-black dark:hover:text-white transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                #repo{" "}
+              </a>
             )}
-          </nav>
+          </div>
         )
       }
     </div>
