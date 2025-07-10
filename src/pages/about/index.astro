@@ -5,7 +5,8 @@ import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { ABOUT, SITE, SOCIALS } from "@consts";
 
-const about = await getEntry("about", "index");
+const about = await getEntry('about', 'index');
+if (!about) throw new Error('About content not found');
 const { Content } = await about.render();
 ---
 
