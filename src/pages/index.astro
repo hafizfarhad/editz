@@ -45,15 +45,6 @@ const projects: CollectionEntry<"projects">[] = (
               </Link>
             </li>
             {"/"}
-            <li class="line-clamp-1">
-              <Link
-                href={`mailto:${SITE.EMAIL}`}
-                aria-label={`Email ${SITE.TITLE}`}
-              >
-                Email
-              </Link>
-            </li>
-            {"/"}
             {
               SOCIALS.map((SOCIAL) => (
                 <li class="flex gap-x-2 text-nowrap">
@@ -68,6 +59,14 @@ const projects: CollectionEntry<"projects">[] = (
                 </li>
               ))
             }
+            <li class="line-clamp-1">
+              <Link
+                href={`mailto:${SITE.EMAIL}`}
+                aria-label={`Email ${SITE.TITLE}`}
+              >
+                Email
+              </Link>
+            </li>
           </ul>
         </section>
 
