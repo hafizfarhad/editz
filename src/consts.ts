@@ -39,7 +39,11 @@ export const SOCIALS: Socials = [
     HREF: "https://github.com/hafizfarhad",
   },
   {
-    NAME: "Website",
-    HREF: "https://hafizfarhad.com",
+    NAME: "Youtube",
+    HREF: "https://youtube.com/@realhafizfarhad",
+  },
+  {
+    NAME: "LinkedIn",
+    HREF: "https://linkedin.com/in/hafizfarhad/",
   },
 ];
