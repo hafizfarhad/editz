@@ -7,6 +7,10 @@ tags:
   - notes
 ---
 
+
+import Callout from "@/components/Callout.astro";
+
+---
 ## Basics
 
 In most of the challenges, you'll typically see one or two main files:
@@ -15,9 +19,9 @@ In most of the challenges, you'll typically see one or two main files:
 
 2. **docker-compose.yml** - The file contains Instructions to build multiple containers that work together
 
-:::tip
+<Callout>
 When to use which file? Always use `docker-compose.yml` file if given.
-:::
+</Callout>
 
 ## Install
 
@@ -94,9 +98,9 @@ To see container logs:
 docker logs challenge-name-container
 ```
 
-:::note
+<Callout type="info">
 `challenge-name` is the Docker image (template), while `challenge-name-container` is the running instance created from that image. You can create multiple different containers from the same image, each with its own settings.
-:::
+</Callout>
 
 ### Cleanup
 
