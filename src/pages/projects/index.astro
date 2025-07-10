@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
+import PostLink from "@components/PostLink.astro";
 import { PROJECTS } from "@consts";
 
 const projects = (await getCollection("projects"))
@@ -17,11 +17,11 @@ const projects = (await getCollection("projects"))
         <div class="animate font-semibold text-black dark:text-white">
           All Projects
         </div>
-        <ul class="animate not-prose flex flex-col gap-4">
+        <ul class="animate not-prose flex flex-col gap-2">
           {
             projects.map((project) => (
               <li>
-                <ArrowCard entry={project} />
+                <PostLink entry={project} />
               </li>
             ))
           }

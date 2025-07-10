@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+};
+
+const { entry } = Astro.props;
+---
+
+<div class="flex items-center gap-4">
+  {entry.data.date && (
+    <span class="text-neutral-600 dark:text-neutral-400 whitespace-nowrap w-24">
+      {entry.data.date.toISOString().split('T')[0]}
+    </span>
+  )}
+  <a
+    href={`/${entry.collection}/${entry.id}`}
+    class="text-current hover:text-black dark:hover:text-white"
+  >
+    {entry.data.title}
+  </a>
+</div>

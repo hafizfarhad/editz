@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import { SITE, HOME, SOCIALS } from "@consts";
-import ArrowCard from "@components/ArrowCard.astro";
+import PostLink from "@components/PostLink.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -77,11 +77,11 @@ const projects: CollectionEntry<"projects">[] = (
             </h2>
             <Link href="/projects"> See all projects </Link>
           </div>
-          <ul class="not-prose flex flex-col gap-4">
+          <ul class="not-prose flex flex-col gap-2">
             {
               projects.map((project) => (
                 <li>
-                  <ArrowCard entry={project} />
+                  <PostLink entry={project} />
                 </li>
               ))
             }
@@ -95,11 +95,11 @@ const projects: CollectionEntry<"projects">[] = (
             </h2>
             <Link href="/blog"> See all posts </Link>
           </div>
-          <ul class="not-prose flex flex-col gap-4">
+          <ul class="not-prose flex flex-col gap-2">
             {
               blog.map((post) => (
                 <li>
-                  <ArrowCard entry={post} />
+                  <PostLink entry={post} />
                 </li>
               ))
             }
