@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages
+name: Install dependencies and build
 
 on:
   push:

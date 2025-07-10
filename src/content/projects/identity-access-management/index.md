@@ -1,8 +1,8 @@
 ---
 title: "Identity Access Management System"
-description: "Portfolio and blog build with astro."
+description: "Identity and Access Management System."
 date: "10/14/2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
+demoURL: "https://github.com/hafizfarhad/identity-access-management"
 repoURL: "https://github.com/hafizfarhad/identity-access-management"
 ---
 
