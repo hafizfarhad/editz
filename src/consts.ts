@@ -31,6 +31,10 @@ export const ABOUT: Metadata = {
 
 export const SOCIALS: Socials = [
   {
+    NAME: "CV",
+    HREF: "",
+  },
+  {
     NAME: "X (formerly Twitter)",
     HREF: "https://twitter.com/realhafizfarhad",
   },
