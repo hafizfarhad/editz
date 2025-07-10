@@ -8,16 +8,9 @@ type Props = {
 const { entry } = Astro.props;
 ---
 
-<div class="flex items-center justify-between gap-4">
-  <a
-    href={`/${entry.collection}/${entry.id}`}
-    class="text-current hover:text-black dark:hover:text-white"
-  >
-    {entry.data.title}
-  </a>
-  {entry.data.date && (
-    <span class="text-neutral-600 dark:text-neutral-400 whitespace-nowrap">
-      {entry.data.date.toISOString().split('T')[0]}
-    </span>
-  )}
-</div>
+<a
+  href={`/${entry.collection}/${entry.id}`}
+  class="block text-current hover:text-black dark:hover:text-white"
+>
+  {entry.data.title}
+</a>
