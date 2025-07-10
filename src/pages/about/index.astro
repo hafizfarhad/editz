@@ -66,14 +66,20 @@ import { ABOUT, SITE, SOCIALS } from "@consts";
               If you want to get in touch with me about something or just to say hi, reach out at:
             </p>
             <div class="flex flex-wrap gap-4">
-              {SOCIALS.map((social) => (
-                <Link 
-                  href={social.HREF} 
-                  external
-                >
-                  {social.NAME}
-                </Link>
-              ))}
+              {
+                SOCIALS.map((SOCIAL) => (
+                  <li class="flex gap-x-2 text-nowrap">
+                    <Link
+                      href={SOCIAL.HREF}
+                      external
+                      aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                    >
+                      {SOCIAL.NAME}
+                    </Link>
+                    {"/"}
+                  </li>
+                ))
+              }
               <Link 
                 href={`mailto:${SITE.EMAIL}`}
               >
