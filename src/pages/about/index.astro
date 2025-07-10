@@ -58,8 +58,7 @@ import { ABOUT, SITE, SOCIALS } from "@consts";
           </h2>
           <div class="space-y-4 leading-6">
             <p>
-              If you want to get in touch with me about something or just to say hi, reach out on social media 
-              or send me an email at: <code class="bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">echo 'bXJoYWZpemZhcmhhZEBnbWFpbC5jb20K' | base64 -d</code>
+              If you want to get in touch with me about something or just to say hi, reach out at:
             </p>
             <div class="flex flex-wrap gap-4">
               {SOCIALS.map((social) => (
@@ -70,6 +69,11 @@ import { ABOUT, SITE, SOCIALS } from "@consts";
                   {social.NAME}
                 </Link>
               ))}
+              <Link 
+                href={`mailto:${SITE.EMAIL}`}
+              >
+                Email
+              </Link>
             </div>
           </div>
         </section>
