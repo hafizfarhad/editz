@@ -4,6 +4,7 @@ export const SITE: Site = {
   TITLE: "Hafiz Farhad",
   DESCRIPTION: "Hafiz Farhad - Security Researcher/Programmer/CTF Player.",
   EMAIL: "mrhafizfarhad@gmail.com",
+  CV: "https://hafizfarhad.github.io/cv/",
   NUM_POSTS_ON_HOMEPAGE: 5,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
@@ -30,10 +31,6 @@ export const ABOUT: Metadata = {
 };
 
 export const SOCIALS: Socials = [
-  {
-    NAME: "CV",
-    HREF: "",
-  },
   {
     NAME: "X (formerly Twitter)",
     HREF: "https://twitter.com/realhafizfarhad",
