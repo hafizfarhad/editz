@@ -71,7 +71,7 @@ const { Content } = await render(post);
       </h1>
       {
         post.data.tags && post.data.tags?.length > 0 ? (
-          <div class="animate font-mono text-sm text-neutral-600 dark:text-neutral-400">
+          <div class="animate text-sm text-neutral-600 dark:text-neutral-400">
             <span>Tags: </span>
             {post.data.tags.map((tag) => (
               <a
